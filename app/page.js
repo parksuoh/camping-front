@@ -25,7 +25,7 @@ export default function Home() {
         headerName={headerName}
       />
 
-
+    <div>포트포리오용</div>
 
       <div className='w-full mt-10 flex items-center justify-center'>
         <Image
