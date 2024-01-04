@@ -1,5 +1,4 @@
-// const mainPath = "https://suohtest.com";
-const mainPath = "http://localhost:8080";
+const mainPath = "https://suohtest.com";
 
 
 export default mainPath
