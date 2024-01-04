@@ -42,6 +42,13 @@ export default function PlaceItemDetail({placeId, today}) {
         if(!date) return
         if(!place.placeId) return
 
+        let dateSplit = date.split("-")
+        if(dateSplit[1].length === 1) {
+            dateSplit[1] = "0" + dateSplit[1] 
+        }
+        if(dateSplit[2].length === 1) {
+            dateSplit[2] = "0" + dateSplit[2] 
+        }
 
         setButtonLoading(true)
         try{
@@ -53,7 +60,7 @@ export default function PlaceItemDetail({placeId, today}) {
                 },
                 body: JSON.stringify({
                     placeId: place.placeId,
-                    reservationDate: date
+                    reservationDate: dateSplit[0] + "-" + dateSplit[1] + "-" + dateSplit[2] 
                 }),
             });
             if(response.status === 201) {
